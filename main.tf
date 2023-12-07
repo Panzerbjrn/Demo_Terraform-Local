@@ -1,21 +1,4 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.0"
-    }
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=3.0.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = "eu-west-2"
-}
-
-# Configure the Microsoft Azure Provider
-provider "azurerm" {
-  features {}
+resource "azurerm_resource_group" "resoucegroup" {
+  name     = "Demo_Terraform-Local"
+  location = var.region_map[var.region]
 }
