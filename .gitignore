@@ -36,3 +36,4 @@ terraform.rc
 
 # Ignoring custom configuration files
 *.conf
+*Scratchpad*
